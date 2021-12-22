@@ -1,0 +1,87 @@
+<%- include('../fragments/header.ejs') %>
+
+  <section class="shopping-cart">
+    <div class="pop-up-template">
+      <div id="pop-up" class="pop-up">
+        <div class="pop-up-container">
+          <div class="pop-up-header-container">
+            <div class="pop-up-title">Корзина</div>
+            <a class="close-pop-up" href="/"></a>
+          </div>
+
+          <div class="pop-up-table">
+            <div class="table-text table-name">Название</div>
+            <div class="table-text table-amount">Количество</div>
+            <div class="table-text table-price">Цена</div>
+          </div>
+
+          <div class="pop-up-list">
+            <div class="list-template">
+              <% products.forEach(product=> { %>
+                <div class="list-item" id="<%=product.id%>" product-data="<%=JSON.stringify(product)%>">
+                  <div class="list-item-title">
+                    <%= product.name %>
+                  </div>
+
+                  <div class="price-container">
+                    $
+                    <div class="list-item-price">
+                      <%= product.price %>
+                    </div>
+                  </div>
+                  <button class="delete-button" onclick="deleteItem(<%= product.id %>)">
+                    Delete From Cart
+                  </button>
+                </div>
+                <% }) %>
+            </div>
+          </div>
+          <div class="pop-up-footer">
+            <div class="pop-up-table" id="bottom-table">
+              <div class="table-text">Total: <span class="total">0 </span></div>
+            </div>
+            <button class="pop-up-footer-buttons buy-all-button">Buy All</button>
+            <button class="pop-up-footer-buttons cont-shopping-button" href="/">
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="popUpParent">
+    <div id="popup_template">
+      <div id="popup" class="popup">
+        <div class="popup_body">
+          <div class="popup_content">
+            <a href="/" class="popup_close">X</a>
+            <div class="popup_title">Корзина</div>
+
+            <div class="popup_text">
+              <% products.forEach(product=> { %>
+                <div class="itemsGood">
+                  <span>
+                    <span class="NameGood">
+                      <%= product.name %>
+                    </span>
+                    <span class="CountGood">1</span>
+                    <span class="PriceGood">
+                      <%= product.price %>руб.
+                    </span>
+                    <button class="DeleteGood" onclick="deleteItem(<%= product.id %>)">Удалить из корзины</button>
+                  </span>
+                </div>
+
+                <% }) %>
+
+            </div>
+            <div class="button_cont">
+              <button class="button-push">Купить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

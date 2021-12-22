@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+  background: rgb(0, 0, 0);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.h1 {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: aliceblue;
+}
+.graficLogo {
+  padding: 5px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+nav {
+  margin: auto;
+  width: 800px;
+  height: 100px;
+}
+.top-nav {
+  background-color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin-top: 40px;
+}
+.top-nav a {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 15px;
+}
+.top-nav a:hover {
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+.card {
+  margin: auto;
+  padding: 10px;
+  flex: 1 0 25%;
+  max-width: 400px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 7px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  white-space: nowrap;
+}
+.image {
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+  background-size: cover;
+  display: block;
+}
+h2 {
+  font-size: 20px;
+}
+.card-price-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social img {
+  margin-left: 50px;
+  height: 50px;
+  width: 50px;
+}
+.social img:hover {
+  opacity: 0.5;
+}
+footer {
+  width: 100%;
+  height: auto;
+  background: #222222;
+  padding: 30px 0 30px 0;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  /*opacity: 0;*/
+  visibility: visible;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop_area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 30px;
+}
+.popup_content {
+  background-color: #fff;
+  color: #000;
+  max-width: 800px;
+  height: 500px;
+  padding: 30px;
+  position: relative;
+  transition: all 0.8s ease 0s;
+  /*opacity: 0;*/
+}
+.popup_close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.popup_title {
+  font-size: 40px;
+  margin: 0px 0px 1em 0px;
+}
+
+.scrol {
+  overflow-y: scroll;
+  height: 200px;
+}
+/* */
+.button-order {
+  margin-top: 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  padding: 10px 40px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  background: #fff;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.button-order-div {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+/* */
+
+.button-order:hover {
+  background-color: #000000;
+  color: white;
+}
+.button-push {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  padding: 5px 20px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  background: #fff;
+  margin-left: 10px;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+.button-push:hover {
+  background-color: #000000; /* Green */
+  color: white;
+}
+
+.good-title {
+  font-size: 25px;
+  color: #000;
+}
+.good-price {
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.itemsGood {
+  display: flex;
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  max-height: 500px;
+  width: 400px;
+  border-radius: 7px;
+  border: 2px solid rgb(63, 59, 59);
+}
+
+.NameGood {
+  display: flex;
+  margin-left: 2px;
+  text-align: left;
+  flex-direction: row;
+
+  width: 150px;
+}
+.CountGood {
+  display: flex;
+  flex-direction: row;
+  margin: 0 32px;
+}
+.PriceGood {
+  text-align: right;
+  min-width: 115px;
+}
+
+.popup_text {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  color: white;
+  margin: 20px;
+  height: 60%;
+  min-width: fit-content;
+  overflow-y: scroll;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 7px;
+}
+.DeleteGood {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 7px;
+  padding: 5px 5px;
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+  background: #fff;
+  margin-left: 10px;
+  border: 2px solid #000000;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+}
+.DeleteGood:hover {
+  background-color: rgb(175, 173, 173);
+}
+
+
+
+
+
+/* PopUp*/
